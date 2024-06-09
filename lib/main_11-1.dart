@@ -1,3 +1,5 @@
+//INDRIANA NOVIYANTI
+//1304201002
 import 'tutorial_11-1.dart';
 import 'dart:ui';
 
@@ -35,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final data = const[
+  final data = const [
     {"tgl": "02/03/2022", "nilai": "150"},
     {"tgl": "01/02/2022", "nilai": "140"},
     {"tgl": "12/01/2022", "nilai": "170"},
@@ -110,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       SizedBox(height: 20),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal:10),
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -120,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                             Text(
                               'Structure\n 80',
-                              style: TextStyle(color: Colors.white,fontSize: 16),
+                              style: TextStyle(color: Colors.white, fontSize: 16),
                             ),
                             Text(
                               'Reading\n 90',
@@ -140,31 +142,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.25))
                 ),
-                Container(
-                    height: 300,
-                    child: ListView.builder(
-                        itemCount: data.length,
-                        itemBuilder: (context, index) {
-                          return Column(
-                              children: [
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        'Tanggal tes:\n Nilai:',
-                                        style: TextStyle(color: Colors.blue, fontSize: 20),
-                                      ),
-                                      Text(
-                                        data[index]["tgl"]! + '\n' + data[index]["nilai"]!,
-                                        style: TextStyle(color: Colors.blue, fontSize: 20),
-                                      ),
-                                    ]
-                                ),
-                                SizedBox(height: 10)
-                              ]
-                          );
-                        }
-                    )
+                Expanded(
+                  child: ListView.builder(
+                      itemCount: data.length,
+                      itemBuilder: (context, index) {
+                        return Column(
+                            children: [
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text(
+                                      'Tanggal tes:\n Nilai:',
+                                      style: TextStyle(color: Colors.blue, fontSize: 20),
+                                    ),
+                                    Text(
+                                      data[index]["tgl"]! + '\n' + data[index]["nilai"]!,
+                                      style: TextStyle(color: Colors.blue, fontSize: 20),
+                                    ),
+                                  ]
+                              ),
+                              SizedBox(height: 10)
+                            ]
+                        );
+                      }
+                  ),
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 30),
